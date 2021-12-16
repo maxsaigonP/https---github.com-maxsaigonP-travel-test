@@ -1,6 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_p/luu_tru.dart';
 import 'dart:ui';
+
+import 'package:travel_p/quan_an.dart';
 
 class home_tab extends StatefulWidget {
   @override
@@ -157,7 +160,16 @@ class home_tabState extends State<home_tab> {
         Row(
           children: [
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                if (title == "Quán Ăn") {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => quan_an()));
+                }
+                if (title == "Lưu Trú") {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => luu_tru()));
+                }
+              },
               child: Text(
                 "Xem thêm",
                 style: TextStyle(fontSize: 15, color: Colors.blueAccent),
@@ -197,12 +209,18 @@ class home_tabState extends State<home_tab> {
                         TextButton(
                             onPressed: () {},
                             child: CircleAvatar(
-                              radius: 40,
+                              radius: 35,
                               backgroundImage: AssetImage("images/a.jpg"),
                             ))
                       ],
                     )
                   ],
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 5),
+                  decoration: BoxDecoration(
+                      border: Border.fromBorderSide(
+                          BorderSide(width: 1, color: Colors.grey))),
                 ),
                 SizedBox(
                   height: 25,
@@ -369,5 +387,19 @@ class home_tabState extends State<home_tab> {
             ))
       ],
     );
+  }
+}
+
+class diadanh_more extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return diadanh_moreState();
+  }
+}
+
+class diadanh_moreState extends State<diadanh_more> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
