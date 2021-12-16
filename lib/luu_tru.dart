@@ -61,7 +61,10 @@ class luu_truState extends State<luu_tru> {
                 padding: EdgeInsets.all(30),
                 child: Text(
                   "LƯU TRÚ",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blueAccent),
                 ),
               ),
               Row(

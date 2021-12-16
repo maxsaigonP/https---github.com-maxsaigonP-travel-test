@@ -61,7 +61,10 @@ class quan_anState extends State<quan_an> {
                 padding: EdgeInsets.all(30),
                 child: Text(
                   "QUÁN ĂN",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blueAccent),
                 ),
               ),
               Row(

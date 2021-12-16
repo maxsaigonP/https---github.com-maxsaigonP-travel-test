@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_p/main.dart';
 
 class search_tab extends StatefulWidget {
   @override
@@ -25,7 +26,12 @@ class search_tabState extends State<search_tab> {
                     Row(
                       children: [
                         TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => MyApp()));
+                            },
                             child: Container(
                               width: 150,
                               height: 80,
