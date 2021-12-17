@@ -220,7 +220,39 @@ class home_tabState extends State<home_tab> {
                   margin: EdgeInsets.only(top: 5),
                   decoration: BoxDecoration(
                       border: Border.fromBorderSide(
-                          BorderSide(width: 1, color: Colors.grey))),
+                          BorderSide(width: 1, color: Colors.grey.shade300))),
+                ),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(15),
+                      child: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: AssetImage("images/a.jpg"),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 5),
+                      width: 280,
+                      height: 40,
+                      decoration: BoxDecoration(
+                          border:
+                              Border.all(width: 1, color: Colors.grey.shade300),
+                          borderRadius: BorderRadius.all(Radius.circular(30))),
+                      child: TextButton(
+                          onPressed: () {},
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text("Chia sẻ địa danh..."),
+                          )),
+                    )
+                  ],
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 5),
+                  decoration: BoxDecoration(
+                      border: Border.fromBorderSide(
+                          BorderSide(width: 1, color: Colors.grey.shade300))),
                 ),
                 SizedBox(
                   height: 25,
@@ -263,8 +295,8 @@ class home_tabState extends State<home_tab> {
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
               border: Border(
-                  top: BorderSide(width: 1, color: Colors.grey),
-                  bottom: BorderSide(width: 1, color: Colors.grey))),
+                  top: BorderSide(width: 1, color: Colors.grey.shade300),
+                  bottom: BorderSide(width: 1, color: Colors.grey.shade300))),
           child: Text(
             "Bài Viết",
             style: TextStyle(fontSize: 20, color: Colors.blueAccent),
@@ -292,7 +324,7 @@ class home_tabState extends State<home_tab> {
         ),
         Padding(
           padding: EdgeInsets.only(top: 10, bottom: 25, right: 25, left: 25),
-          child: Text("Beautiful !"),
+          child: Text("Đẹp vl !"),
         ),
         Padding(
           padding: EdgeInsets.all(15),
@@ -316,7 +348,7 @@ class home_tabState extends State<home_tab> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Icon(Icons.remove_red_eye, color: Colors.grey),
+                    Icon(Icons.remove_red_eye, color: Colors.grey.shade300),
                     Text("10k lượt xem")
                   ],
                 ),
@@ -341,7 +373,7 @@ class home_tabState extends State<home_tab> {
                   margin: EdgeInsets.only(top: 10),
                   decoration: BoxDecoration(
                       border: Border.fromBorderSide(
-                          BorderSide(width: 1, color: Colors.grey))),
+                          BorderSide(width: 1, color: Colors.grey.shade300))),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -350,8 +382,8 @@ class home_tabState extends State<home_tab> {
                       children: [
                         IconButton(
                           onPressed: () {},
-                          icon:
-                              Icon(Icons.thumb_up_outlined, color: Colors.grey),
+                          icon: Icon(Icons.thumb_up_outlined,
+                              color: Colors.grey.shade300),
                         ),
                         Text("Thích")
                       ],
@@ -361,7 +393,7 @@ class home_tabState extends State<home_tab> {
                         IconButton(
                           onPressed: () {},
                           icon: Icon(Icons.thumb_down_outlined,
-                              color: Colors.grey),
+                              color: Colors.grey.shade300),
                         ),
                         Text("Không thích")
                       ],
@@ -370,7 +402,8 @@ class home_tabState extends State<home_tab> {
                       children: [
                         IconButton(
                           onPressed: () {},
-                          icon: Icon(Icons.share_outlined, color: Colors.grey),
+                          icon: Icon(Icons.share_outlined,
+                              color: Colors.grey.shade300),
                         ),
                         Text("Chia sẻ")
                       ],
@@ -381,25 +414,11 @@ class home_tabState extends State<home_tab> {
                   margin: EdgeInsets.only(top: 5),
                   decoration: BoxDecoration(
                       border: Border.fromBorderSide(
-                          BorderSide(width: 1, color: Colors.grey))),
+                          BorderSide(width: 1, color: Colors.grey.shade300))),
                 )
               ],
             ))
       ],
     );
-  }
-}
-
-class diadanh_more extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return diadanh_moreState();
-  }
-}
-
-class diadanh_moreState extends State<diadanh_more> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

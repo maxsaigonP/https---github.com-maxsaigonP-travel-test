@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_p/home_tab.dart';
+import 'package:travel_p/trang_ca_nhan.dart';
 import 'tim_kiem.dart';
 
 void main() {
@@ -40,7 +41,7 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
           search_tab(),
           Text("Tab 3"),
           Text("Tab 4"),
-          Text("Tab 5"),
+          trang_ca_nhan(),
         ]),
         bottomNavigationBar: TabBar(
             labelColor: Colors.blueAccent,
