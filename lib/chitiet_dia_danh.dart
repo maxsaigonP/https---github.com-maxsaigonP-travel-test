@@ -2,15 +2,20 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:travel_p/quan_an.dart';
 
-class chitiet_luutru extends StatefulWidget {
+import 'dia_danh.dart';
+import 'luu_tru.dart';
+import 'nhu_cau.dart';
+
+class chitiet_diadanh extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return chitiet_luutruState();
+    return chitiet_diadanhState();
   }
 }
 
-class chitiet_luutruState extends State<chitiet_luutru> {
+class chitiet_diadanhState extends State<chitiet_diadanh> {
   CarouselSlider slideShow(List<Column> lst) {
     return CarouselSlider(
       items: lst,
@@ -38,7 +43,32 @@ class chitiet_luutruState extends State<chitiet_luutru> {
           ],
         ),
         Row(
-          children: [],
+          children: [
+            TextButton(
+              onPressed: () {
+                if (title == "Quán ăn gần đây") {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => quan_an()));
+                }
+                if (title == "Lưu trú gần đây") {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => luu_tru()));
+                }
+                if (title == "Nhu Cầu") {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => nhu_cau()));
+                }
+                if (title == "Địa Danh Nổi Bật") {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => dia_danh()));
+                }
+              },
+              child: Text(
+                "Xem thêm",
+                style: TextStyle(fontSize: 15, color: Colors.blueAccent),
+              ),
+            )
+          ],
         )
       ],
     );
@@ -60,7 +90,7 @@ class chitiet_luutruState extends State<chitiet_luutru> {
           children: [
             Container(
               padding: EdgeInsets.only(left: 30),
-              child: Text("Nhà Hàng ABC", style: TextStyle(fontSize: 18)),
+              child: Text("Khách Sạn Wano", style: TextStyle(fontSize: 18)),
             ),
           ],
         ),
@@ -74,26 +104,12 @@ class chitiet_luutruState extends State<chitiet_luutru> {
                     children: [Icon(Icons.place), Text("Ho Chi Minh")],
                   )),
             ),
-            Expanded(
-              child: SizedBox(),
-            ),
-            Padding(
-              padding: EdgeInsets.only(right: 10),
-              child: TextButton(
-                  onPressed: () {},
-                  child: Row(
-                    children: [
-                      Icon(Icons.access_time_outlined),
-                      Text("12 a.m - 10 p.m")
-                    ],
-                  )),
-            ),
           ],
         )
       ],
     )
   ];
-  final List<Column> imgListLuuTru = [
+  final List<Column> imgListdiadanh = [
     Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -109,7 +125,7 @@ class chitiet_luutruState extends State<chitiet_luutru> {
           children: [
             Container(
               padding: EdgeInsets.only(left: 30),
-              child: Text("Khách Sạn Wano"),
+              child: Text("Nhà hàng"),
             ),
           ],
         ),
@@ -156,7 +172,7 @@ class chitiet_luutruState extends State<chitiet_luutru> {
           Container(
             padding: EdgeInsets.all(15),
             child: Text(
-              "Khách Sạn Wano",
+              "InterCointinetal\nResidence Saigon",
               style: TextStyle(
                   height: 1.5,
                   fontSize: 20,
@@ -178,26 +194,6 @@ class chitiet_luutruState extends State<chitiet_luutru> {
                       )
                     ],
                   )),
-              TextButton(
-                  onPressed: () {},
-                  child: Row(
-                    children: [
-                      Icon(Icons.access_time_outlined),
-                      Container(
-                          padding: EdgeInsets.only(left: 5),
-                          child: Text("10 a.m - 11 p.m"))
-                    ],
-                  )),
-              TextButton(
-                  onPressed: () {},
-                  child: Row(
-                    children: [
-                      Icon(Icons.call_outlined),
-                      Container(
-                          padding: EdgeInsets.only(left: 5),
-                          child: Text("0123456789"))
-                    ],
-                  )),
             ],
           ),
           Container(
@@ -209,13 +205,16 @@ class chitiet_luutruState extends State<chitiet_luutru> {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(15),
-            child: Text(
-              "Hotel Continental Saigon (tên tiếng Việt là Khách sạn Hoàn Cầu) có vị trí rất thuận tiện, tọa lạc ngay giữa trung tâm thành phố Hồ Chí Minh. Từ đây, du khách có thể đi bộ đến các điểm vui chơi giải trí, các điểm tổ chức lễ hội, sự kiện và các nơi giao dịch công việc như Nhà hát Thành Phố, Dinh Độc Lập, Nhà thờ Đức Bà, Chợ Bến Thành..." +
-                  "Được xây dựng từ 1878, Hotel Continental ngày nay vẫn giữ được nét cổ điển, song hành với những tòa nhà từ thời xưa ở Sài Gòn như Nhà Hát Thành Phố, Nhà Thờ Đức Bà, Ủy Ban Nhân Dân Thành Phố Hồ Chí Minh đi tới tương lai. Trên con đường Đồng Khởi luôn nhộn nhịp, Hotel Continental vẫn giữ cho mình giáng vẻ uy nghi cổ kính từ thuở ban đầu. Bên trong tòa nhà tráng lệ đó, một thế hệ mới nhân viên khách sạn ngày đêm tận tâm, đầy nhiệt huyết hết lòng phục vụ lữ khách gần xa những ngày lưu trú thư giãn tuyệt vời và những kỷ niệm đầy lưu luyến khi họ đến với thành phố Hồ Chí Minh.",
-              style: TextStyle(fontSize: 18, height: 1.2),
-            ),
-          ),
+              padding: EdgeInsets.all(15),
+              child: Flexible(
+                child: Text(
+                  "Intecontinental Residences Saigon tọa lạc tại vị trí thuận tiện tại Kumho Plaza, cách Tháp Sài Gòn, Trung tâm Thương mại Sài Gòn và các văn phòng lãnh sự nước ngoài một đoạn đi bộ. Chỉ mất 10 phút đi bộ nhàn nhã là đến công viên thành phố, sở thú và dinh Thống Nhất. InterContinental Residences Saigon cung cấp các dịch vụ và tiện ích dân cư cao cấp. Ngoài việc cung cấp tầm nhìn ra toàn cảnh thành phố từ các dinh thự, nó còn có câu lạc bộ sức khỏe và spa hạng nhất. Sống cuộc sống InterContinental tại địa chỉ hàng đầu Sài Gòn, nơi những cư dân quốc tế sành điệu có thể trải nghiệm cuộc sống đương đại đặc biệt trong khu phức hợp tích hợp tốt nhất thành phố.",
+                  style: TextStyle(
+                    fontSize: 18,
+                    height: 1.2,
+                  ),
+                ),
+              )),
           Container(
             padding: EdgeInsets.all(15),
             child: Text(
@@ -233,7 +232,7 @@ class chitiet_luutruState extends State<chitiet_luutru> {
           SizedBox(
             height: 15,
           ),
-          slideShow(imgListLuuTru),
+          slideShow(imgListdiadanh),
           SizedBox(
             height: 25,
           ),

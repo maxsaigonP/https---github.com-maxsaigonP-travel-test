@@ -120,13 +120,15 @@ class luu_truState extends State<luu_tru> {
             child: Expanded(
                 child: Column(
               children: [
-                Container(
-                  padding: EdgeInsets.all(10),
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusDirectional.only(
+                          topStart: Radius.circular(20),
+                          topEnd: Radius.circular(20))),
+                  clipBehavior: Clip.antiAlias,
                   child: Image.asset(
                     "images/z.jpg",
-                    height: 150,
-                    width: 400,
-                    fit: BoxFit.cover,
+                    width: double.maxFinite,
                   ),
                 ),
                 Row(
@@ -177,13 +179,15 @@ class luu_truState extends State<luu_tru> {
             child: Expanded(
                 child: Column(
               children: [
-                Container(
-                  padding: EdgeInsets.all(10),
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusDirectional.only(
+                          topStart: Radius.circular(20),
+                          topEnd: Radius.circular(20))),
+                  clipBehavior: Clip.antiAlias,
                   child: Image.asset(
                     "images/z.jpg",
-                    height: 150,
-                    width: 400,
-                    fit: BoxFit.cover,
+                    width: double.maxFinite,
                   ),
                 ),
                 Row(
@@ -234,13 +238,15 @@ class luu_truState extends State<luu_tru> {
             child: Expanded(
                 child: Column(
               children: [
-                Container(
-                  padding: EdgeInsets.all(10),
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusDirectional.only(
+                          topStart: Radius.circular(20),
+                          topEnd: Radius.circular(20))),
+                  clipBehavior: Clip.antiAlias,
                   child: Image.asset(
                     "images/z.jpg",
-                    height: 150,
-                    width: 400,
-                    fit: BoxFit.cover,
+                    width: double.maxFinite,
                   ),
                 ),
                 Row(

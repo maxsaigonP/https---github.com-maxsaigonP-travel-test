@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_p/main.dart';
 
 class form_login extends StatefulWidget {
   @override
@@ -125,7 +126,10 @@ class form_loginState extends State<form_login> {
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.blueAccent),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => MyApp()));
+              },
               child: Text(
                 "Đăng Nhập",
                 style: TextStyle(color: Colors.white, fontSize: 20),

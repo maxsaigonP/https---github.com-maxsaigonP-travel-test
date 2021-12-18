@@ -39,7 +39,9 @@ class create_postState extends State<create_post> {
                 child: Align(
                     alignment: Alignment.center,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       child: Text(
                         "Post",
                         style: TextStyle(color: Colors.white),

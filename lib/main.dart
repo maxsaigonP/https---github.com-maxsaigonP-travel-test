@@ -10,7 +10,7 @@ void main() {
   runApp(MaterialApp(
     title: "Travel",
     debugShowCheckedModeBanner: false,
-    home: const MyApp(),
+    home: form_app(),
   ));
 }
 
@@ -27,7 +27,7 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 5, vsync: this);
+    _tabController = TabController(length: 4, vsync: this);
   }
 
   @override
@@ -43,7 +43,6 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
           home_tab(),
           search_tab(),
           form_login(),
-          form_regis(),
           trang_ca_nhan(),
         ]),
         bottomNavigationBar: TabBar(
@@ -70,13 +69,6 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                   color: Colors.blueAccent,
                 ),
                 text: "Bản đồ",
-              ),
-              Tab(
-                icon: Icon(
-                  Icons.notifications,
-                  color: Colors.blueAccent,
-                ),
-                text: "Thông báo",
               ),
               Tab(
                 icon: Icon(

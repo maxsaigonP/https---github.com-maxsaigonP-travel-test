@@ -17,7 +17,9 @@ class form_regisState extends State<form_regis> {
     return Scaffold(
         appBar: AppBar(
             leading: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 icon: Icon(
                   Icons.arrow_back,
                   color: Colors.blueAccent,

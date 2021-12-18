@@ -13,6 +13,7 @@ class form_change_passState extends State<form_change_pass> {
   bool checkOldPass = true;
   bool checkNewPass = true;
   bool checkReNewPass = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -196,7 +197,9 @@ class form_change_passState extends State<form_change_pass> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.grey.shade300),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     child: Text(
                       "Huỷ",
                       style: TextStyle(color: Colors.black, fontSize: 20),
