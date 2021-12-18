@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_p/chitiet_quan_an.dart';
 import 'package:travel_p/home_tab.dart';
 import 'package:travel_p/main.dart';
 
@@ -105,17 +106,89 @@ class quan_anState extends State<quan_an> {
             ],
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => chitiet_quan_an()));
+            },
             child: Expanded(
                 child: Column(
               children: [
-                Container(
-                  padding: EdgeInsets.all(10),
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusDirectional.only(
+                          topStart: Radius.circular(20),
+                          topEnd: Radius.circular(20))),
+                  clipBehavior: Clip.antiAlias,
                   child: Image.asset(
                     "images/z.jpg",
-                    height: 150,
-                    width: 400,
-                    fit: BoxFit.cover,
+                    width: double.maxFinite,
+                  ),
+                ),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(left: 30),
+                      child: Text("Nhà Hàng ABC"),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 15),
+                      child: TextButton(
+                          onPressed: () {},
+                          child: Row(
+                            children: [Icon(Icons.place), Text("Ho Chi Minh")],
+                          )),
+                    ),
+                    Expanded(
+                      child: SizedBox(),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 10),
+                      child: TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => chitiet_quan_an()));
+                          },
+                          child: Row(
+                            children: [
+                              Icon(Icons.access_time_outlined),
+                              Text("12 a.m - 10 p.m")
+                            ],
+                          )),
+                    ),
+                  ],
+                ),
+              ],
+            )),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 5),
+            decoration: BoxDecoration(
+                border: Border.fromBorderSide(
+                    BorderSide(width: 1, color: Colors.grey))),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => chitiet_quan_an()));
+            },
+            child: Expanded(
+                child: Column(
+              children: [
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusDirectional.only(
+                          topStart: Radius.circular(20),
+                          topEnd: Radius.circular(20))),
+                  clipBehavior: Clip.antiAlias,
+                  child: Image.asset(
+                    "images/z.jpg",
+                    width: double.maxFinite,
                   ),
                 ),
                 Row(
@@ -166,70 +239,15 @@ class quan_anState extends State<quan_an> {
             child: Expanded(
                 child: Column(
               children: [
-                Container(
-                  padding: EdgeInsets.all(10),
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusDirectional.only(
+                          topStart: Radius.circular(20),
+                          topEnd: Radius.circular(20))),
+                  clipBehavior: Clip.antiAlias,
                   child: Image.asset(
                     "images/z.jpg",
-                    height: 150,
-                    width: 400,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.only(left: 30),
-                      child: Text("Nhà Hàng ABC"),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 15),
-                      child: TextButton(
-                          onPressed: () {},
-                          child: Row(
-                            children: [Icon(Icons.place), Text("Ho Chi Minh")],
-                          )),
-                    ),
-                    Expanded(
-                      child: SizedBox(),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: TextButton(
-                          onPressed: () {},
-                          child: Row(
-                            children: [
-                              Icon(Icons.access_time_outlined),
-                              Text("12 a.m - 10 p.m")
-                            ],
-                          )),
-                    ),
-                  ],
-                ),
-              ],
-            )),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 5),
-            decoration: BoxDecoration(
-                border: Border.fromBorderSide(
-                    BorderSide(width: 1, color: Colors.grey))),
-          ),
-          TextButton(
-            onPressed: () {},
-            child: Expanded(
-                child: Column(
-              children: [
-                Container(
-                  padding: EdgeInsets.all(10),
-                  child: Image.asset(
-                    "images/z.jpg",
-                    height: 150,
-                    width: 400,
-                    fit: BoxFit.cover,
+                    width: double.maxFinite,
                   ),
                 ),
                 Row(

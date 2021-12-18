@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:travel_p/form_app.dart';
+import 'package:travel_p/form_login.dart';
+import 'package:travel_p/form_regis.dart';
 import 'package:travel_p/home_tab.dart';
 import 'package:travel_p/trang_ca_nhan.dart';
 import 'tim_kiem.dart';
@@ -39,8 +42,8 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
         body: TabBarView(controller: _tabController, children: [
           home_tab(),
           search_tab(),
-          Text("Tab 3"),
-          Text("Tab 4"),
+          form_login(),
+          form_regis(),
           trang_ca_nhan(),
         ]),
         bottomNavigationBar: TabBar(

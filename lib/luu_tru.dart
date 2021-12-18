@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_p/chitiet_luu_tru.dart';
 import 'package:travel_p/home_tab.dart';
 import 'package:travel_p/main.dart';
 
@@ -112,7 +113,10 @@ class luu_truState extends State<luu_tru> {
             ),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => chitiet_luutru()));
+            },
             child: Expanded(
                 child: Column(
               children: [

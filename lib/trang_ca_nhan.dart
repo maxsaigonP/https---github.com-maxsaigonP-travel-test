@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_p/form_change_pass.dart';
 
 class trang_ca_nhan extends StatefulWidget {
   @override
@@ -41,7 +42,7 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
                       height: 30,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.white,
+                        color: Colors.grey.shade300,
                       ),
                       child: Icon(
                         Icons.camera_alt,
@@ -58,13 +59,52 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
                       height: 30,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.white,
+                        color: Colors.grey.shade300,
                       ),
                       child: Icon(
                         Icons.camera_alt,
                         size: 20,
                       ))),
-            )
+            ),
+            Positioned(
+                top: 10,
+                right: 10,
+                child: PopupMenuButton(
+                  icon: Container(
+                      width: 30,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.grey.shade300,
+                      ),
+                      child: Icon(
+                        Icons.settings,
+                        size: 20,
+                      )),
+                  itemBuilder: (context) => [
+                    PopupMenuItem(
+                      child: ListTile(
+                        leading: Icon(Icons.lock_outline),
+                        title: Text('Đổi mật khẩu'),
+                        subtitle: Text('Thay đổi mật khẩu'),
+                        onTap: () {
+                          setState(() {});
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => form_change_pass()));
+                        },
+                      ),
+                    ),
+                    PopupMenuItem(
+                      child: ListTile(
+                        leading: Icon(Icons.border_color_outlined),
+                        title: Text('Chỉnh sửa thông tin '),
+                        subtitle: Text('Thay đổi thông tin cá nhân'),
+                      ),
+                    ),
+                  ],
+                ))
           ],
         ),
         SizedBox(
@@ -95,7 +135,7 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
               border: Border.fromBorderSide(
                   BorderSide(width: 2.5, color: Colors.grey.shade300))),
         ),
-        Card(
+        Container(
           child: ListTile(
             leading: CircleAvatar(
               backgroundImage: AssetImage("images/a.jpg"),
@@ -141,7 +181,7 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Icon(Icons.remove_red_eye, color: Colors.grey.shade300),
+                    Icon(Icons.remove_red_eye, color: Colors.grey),
                     Text("10k lượt xem")
                   ],
                 ),
@@ -175,8 +215,8 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
                       children: [
                         IconButton(
                           onPressed: () {},
-                          icon: Icon(Icons.thumb_up_outlined,
-                              color: Colors.grey.shade300),
+                          icon:
+                              Icon(Icons.thumb_up_outlined, color: Colors.grey),
                         ),
                         Text("Thích")
                       ],
@@ -186,7 +226,7 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
                         IconButton(
                           onPressed: () {},
                           icon: Icon(Icons.thumb_down_outlined,
-                              color: Colors.grey.shade300),
+                              color: Colors.grey),
                         ),
                         Text("Không thích")
                       ],
@@ -195,8 +235,7 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
                       children: [
                         IconButton(
                           onPressed: () {},
-                          icon: Icon(Icons.share_outlined,
-                              color: Colors.grey.shade300),
+                          icon: Icon(Icons.share_outlined, color: Colors.grey),
                         ),
                         Text("Chia sẻ")
                       ],

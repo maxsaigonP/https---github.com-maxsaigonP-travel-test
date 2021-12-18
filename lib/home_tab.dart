@@ -1,8 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_p/create_post.dart';
+import 'package:travel_p/dia_danh.dart';
 import 'package:travel_p/luu_tru.dart';
-import 'dart:ui';
-
+import 'package:travel_p/nhu_cau.dart';
 import 'package:travel_p/quan_an.dart';
 
 class home_tab extends StatefulWidget {
@@ -13,21 +14,91 @@ class home_tab extends StatefulWidget {
 }
 
 class home_tabState extends State<home_tab> {
-  final List<Image> imgListDiaDanh = [
-    Image.asset(
-      "images/z.jpg",
-      height: 150,
-      width: 250,
-      fit: BoxFit.cover,
-    ),
+  final List<Column> imgListDiaDanh = [
+    Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadiusDirectional.all(Radius.circular(16))),
+                clipBehavior: Clip.antiAlias,
+                child: Image.asset(
+                  "images/z.jpg",
+                  width: double.maxFinite,
+                ),
+              ),
+            ),
+            Positioned(
+                top: 140,
+                left: 25,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.place,
+                      color: Colors.red,
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      child: Text(
+                        "Nha Trang",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )
+                  ],
+                ))
+          ],
+        ),
+        Expanded(
+          child: SizedBox(),
+        ),
+      ],
+    )
   ];
-  final List<Image> imgListNhuCau = [
-    Image.asset(
-      "images/z.jpg",
-      height: 150,
-      width: 250,
-      fit: BoxFit.cover,
-    ),
+  final List<Column> imgListNhuCau = [
+    Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadiusDirectional.all(Radius.circular(16))),
+                clipBehavior: Clip.antiAlias,
+                child: Image.asset(
+                  "images/z.jpg",
+                  width: double.maxFinite,
+                ),
+              ),
+            ),
+            Positioned(
+                top: 145,
+                left: 130,
+                child: Row(
+                  children: [
+                    Container(
+                      child: Text(
+                        "Tắm Biển",
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
+                ))
+          ],
+        ),
+        Expanded(
+          child: SizedBox(),
+        ),
+      ],
+    )
   ];
   final List<Expanded> imgListQuanAn = [
     Expanded(
@@ -46,7 +117,7 @@ class home_tabState extends State<home_tab> {
           children: [
             Container(
               padding: EdgeInsets.only(left: 30),
-              child: Text("Nhà Hàng ABC"),
+              child: Text("Nhà Hàng ABC", style: TextStyle(fontSize: 18)),
             ),
           ],
         ),
@@ -76,6 +147,68 @@ class home_tabState extends State<home_tab> {
             ),
           ],
         )
+      ],
+    ))
+  ];
+  final List<Expanded> imgListBaiViet = [
+    Expanded(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Container(
+          child: Image.asset(
+            "images/z.jpg",
+            height: 150,
+            width: 250,
+            fit: BoxFit.cover,
+          ),
+        ),
+        Row(
+          children: [
+            Container(
+              padding: EdgeInsets.only(left: 30),
+              child: Text(
+                "Check-in điểm du lịch",
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
+          ],
+        ),
+        Expanded(
+            child: Padding(
+          padding: EdgeInsets.only(left: 10, right: 10),
+          child: Row(
+            children: [
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.thumb_up, color: Colors.blueAccent),
+                  ),
+                  Text("5.6k")
+                ],
+              ),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.remove_red_eye, color: Colors.greenAccent),
+                  ),
+                  Text("6.1k")
+                ],
+              ),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.place, color: Colors.redAccent),
+                  ),
+                  Text("Nha Trang")
+                ],
+              )
+            ],
+          ),
+        ))
       ],
     ))
   ];
@@ -129,7 +262,7 @@ class home_tabState extends State<home_tab> {
       ],
     ))
   ];
-  CarouselSlider slideShow(List<Image> lst) {
+  CarouselSlider slideShow(List<Column> lst) {
     return CarouselSlider(
       items: lst,
       options: CarouselOptions(
@@ -168,6 +301,14 @@ class home_tabState extends State<home_tab> {
                 if (title == "Lưu Trú") {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => luu_tru()));
+                }
+                if (title == "Nhu Cầu") {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => nhu_cau()));
+                }
+                if (title == "Địa Danh Nổi Bật") {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => dia_danh()));
                 }
               },
               child: Text(
@@ -240,7 +381,12 @@ class home_tabState extends State<home_tab> {
                               Border.all(width: 1, color: Colors.grey.shade300),
                           borderRadius: BorderRadius.all(Radius.circular(30))),
                       child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => create_post()));
+                          },
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text("Chia sẻ địa danh..."),
@@ -262,6 +408,14 @@ class home_tabState extends State<home_tab> {
                   height: 15,
                 ),
                 slideShow(imgListDiaDanh),
+                SizedBox(
+                  height: 25,
+                ),
+                sliderTitle("Bài Viết Nổi Bật"),
+                SizedBox(
+                  height: 15,
+                ),
+                slideShowQuan(imgListBaiViet),
                 SizedBox(
                   height: 25,
                 ),
@@ -302,7 +456,7 @@ class home_tabState extends State<home_tab> {
             style: TextStyle(fontSize: 20, color: Colors.blueAccent),
           ),
         ),
-        Card(
+        Container(
           child: ListTile(
             leading: CircleAvatar(
               backgroundImage: AssetImage("images/a.jpg"),
