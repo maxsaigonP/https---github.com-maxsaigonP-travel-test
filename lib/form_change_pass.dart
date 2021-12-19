@@ -24,7 +24,7 @@ class form_change_passState extends State<form_change_pass> {
                 },
                 icon: Icon(
                   Icons.arrow_back,
-                  color: Colors.blueAccent,
+                  color: Color(0XFF0869E1),
                 )),
             backgroundColor: Colors.white,
             shadowColor: Colors.white,
@@ -35,7 +35,7 @@ class form_change_passState extends State<form_change_pass> {
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: Colors.blueAccent),
+                    color: Color(0XFF0869E1)),
               ),
             )),
         body: ListView(
@@ -156,11 +156,11 @@ class form_change_passState extends State<form_change_pass> {
                         icon: check
                             ? Icon(
                                 Icons.check_box,
-                                color: Colors.blueAccent,
+                                color: Color(0XFF0869E1),
                               )
                             : Icon(
                                 Icons.check_box_outline_blank,
-                                color: Colors.blueAccent,
+                                color: Color(0XFF0869E1),
                               )),
                     Expanded(child: Container()),
                     Container(
@@ -169,7 +169,7 @@ class form_change_passState extends State<form_change_pass> {
                           onPressed: () {},
                           child: Text(
                             "Quên tài khoản ?",
-                            style: TextStyle(color: Colors.blueAccent),
+                            style: TextStyle(color: Color(0XFF0869E1)),
                           )),
                     )
                   ],
@@ -180,7 +180,7 @@ class form_change_passState extends State<form_change_pass> {
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.blueAccent),
+                      color: Color(0XFF0869E1)),
                   child: TextButton(
                     onPressed: () {},
                     child: Text(

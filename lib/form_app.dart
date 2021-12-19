@@ -39,7 +39,7 @@ class form_appState extends State<form_app> {
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.blueAccent),
+                    color: Color(0XFF0869E1)),
                 child: TextButton(
                   onPressed: () {
                     Navigator.push(context,
@@ -58,7 +58,7 @@ class form_appState extends State<form_app> {
                 width: 350,
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blueAccent),
+                  border: Border.all(color: Color(0XFF0869E1)),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: TextButton(
@@ -67,7 +67,7 @@ class form_appState extends State<form_app> {
                         MaterialPageRoute(builder: (context) => form_regis()));
                   },
                   child: Text("Đăng Ký",
-                      style: TextStyle(color: Colors.blueAccent, fontSize: 20)),
+                      style: TextStyle(color: Color(0XFF0869E1), fontSize: 20)),
                 ),
               )
             ],

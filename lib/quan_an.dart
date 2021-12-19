@@ -29,12 +29,9 @@ class quan_anState extends State<quan_an> {
                     Row(
                       children: [
                         TextButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
+                            onPressed: () {},
                             child: Container(
-                              width: 150,
-                              height: 80,
+                              width: 95,
                               child: Image.asset("images/logo-ver3.png"),
                             ))
                       ],
@@ -43,12 +40,21 @@ class quan_anState extends State<quan_an> {
                       children: [
                         TextButton(
                             onPressed: () {},
-                            child: CircleAvatar(
-                              radius: 35,
-                              backgroundImage: AssetImage("images/a.jpg"),
-                            ))
+                            child: Container(
+                                width: 40,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                          "images/a.jpg",
+                                        ),
+                                        fit: BoxFit.cover),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(50.0)),
+                                    border: Border.all(
+                                        width: 2, color: Colors.white))))
                       ],
-                    ),
+                    )
                   ],
                 ),
               ),
@@ -65,7 +71,7 @@ class quan_anState extends State<quan_an> {
                   style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent),
+                      color: Color(0XFF0869E1)),
                 ),
               ),
               Row(
@@ -79,7 +85,7 @@ class quan_anState extends State<quan_an> {
                             hintText: "Nhập điểm cần đến....",
                             prefixIcon: Icon(
                               Icons.place,
-                              color: Colors.blueAccent,
+                              color: Color(0XFF0869E1),
                             )),
                       ),
                     ),

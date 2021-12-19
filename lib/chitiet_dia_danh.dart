@@ -35,7 +35,7 @@ class chitiet_diadanhState extends State<chitiet_diadanh> {
               child: Text(
                 title,
                 style: TextStyle(
-                    color: Colors.blueAccent,
+                    color: Color(0XFF0869E1),
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),
@@ -65,7 +65,7 @@ class chitiet_diadanhState extends State<chitiet_diadanh> {
               },
               child: Text(
                 "Xem thêm",
-                style: TextStyle(fontSize: 15, color: Colors.blueAccent),
+                style: TextStyle(fontSize: 15, color: Color(0XFF0869E1)),
               ),
             )
           ],
@@ -176,7 +176,7 @@ class chitiet_diadanhState extends State<chitiet_diadanh> {
               style: TextStyle(
                   height: 1.5,
                   fontSize: 20,
-                  color: Colors.blueAccent,
+                  color: Color(0XFF0869E1),
                   fontWeight: FontWeight.bold),
             ),
           ),

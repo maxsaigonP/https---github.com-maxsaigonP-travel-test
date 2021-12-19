@@ -25,7 +25,7 @@ class xem_themState extends State<xem_them> {
               style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
-                  color: Colors.blueAccent),
+                  color: Color(0XFF0869E1)),
             ),
           )),
       body: ListView(
@@ -59,7 +59,7 @@ class xem_themState extends State<xem_them> {
                 width: 360,
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blueAccent),
+                  border: Border.all(color: Color(0XFF0869E1)),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: TextButton(
@@ -69,7 +69,7 @@ class xem_themState extends State<xem_them> {
                   },
                   child: Text(
                     "Đăng Xuất",
-                    style: TextStyle(color: Colors.blueAccent, fontSize: 20),
+                    style: TextStyle(color: Color(0XFF0869E1), fontSize: 20),
                   ),
                 ),
               ),

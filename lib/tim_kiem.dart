@@ -33,8 +33,7 @@ class search_tabState extends State<search_tab> {
                                       builder: (context) => MyApp()));
                             },
                             child: Container(
-                              width: 150,
-                              height: 80,
+                              width: 95,
                               child: Image.asset("images/logo-ver3.png"),
                             ))
                       ],
@@ -43,10 +42,19 @@ class search_tabState extends State<search_tab> {
                       children: [
                         TextButton(
                             onPressed: () {},
-                            child: CircleAvatar(
-                              radius: 35,
-                              backgroundImage: AssetImage("images/a.jpg"),
-                            ))
+                            child: Container(
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                          "images/a.jpg",
+                                        ),
+                                        fit: BoxFit.cover),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(50.0)),
+                                    border: Border.all(
+                                        width: 2, color: Colors.white))))
                       ],
                     ),
                   ],
@@ -56,13 +64,16 @@ class search_tabState extends State<search_tab> {
                 margin: EdgeInsets.only(top: 5),
                 decoration: BoxDecoration(
                     border: Border.fromBorderSide(
-                        BorderSide(width: 1, color: Colors.grey))),
+                        BorderSide(width: 1, color: Colors.grey.shade300))),
               ),
               Container(
                 padding: EdgeInsets.all(30),
                 child: Text(
                   "ĐIỂM ĐẾN",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0XFF0869E1)),
                 ),
               ),
               Row(
@@ -76,7 +87,7 @@ class search_tabState extends State<search_tab> {
                             hintText: "Nhập điểm cần đến....",
                             prefixIcon: Icon(
                               Icons.place,
-                              color: Colors.blueAccent,
+                              color: Color(0XFF0869E1),
                             )),
                       ),
                     ),
@@ -94,7 +105,8 @@ class search_tabState extends State<search_tab> {
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
                             "Sử dụng vị trí của bạn ngay bây giờ",
-                            style: TextStyle(color: Colors.grey, fontSize: 17),
+                            style: TextStyle(
+                                color: Color(0XFF65676B), fontSize: 17),
                           ),
                         )
                       ],

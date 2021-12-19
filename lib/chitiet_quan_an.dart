@@ -25,7 +25,7 @@ class chitiet_quan_anState extends State<chitiet_quan_an> {
               style: TextStyle(
                   height: 1.5,
                   fontSize: 20,
-                  color: Colors.blueAccent,
+                  color: Color(0XFF0869E1),
                   fontWeight: FontWeight.bold),
             ),
           ),

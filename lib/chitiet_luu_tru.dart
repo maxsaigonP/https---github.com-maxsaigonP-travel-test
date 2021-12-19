@@ -30,7 +30,7 @@ class chitiet_luutruState extends State<chitiet_luutru> {
               child: Text(
                 title,
                 style: TextStyle(
-                    color: Colors.blueAccent,
+                    color: Color(0XFF0869E1),
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),
@@ -160,7 +160,7 @@ class chitiet_luutruState extends State<chitiet_luutru> {
               style: TextStyle(
                   height: 1.5,
                   fontSize: 20,
-                  color: Colors.blueAccent,
+                  color: Color(0XFF0869E1),
                   fontWeight: FontWeight.bold),
             ),
           ),

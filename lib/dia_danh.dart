@@ -32,7 +32,7 @@ class dia_danhState extends State<dia_danh> {
                 child: Text(
                   title,
                   style: TextStyle(
-                      color: Colors.blueAccent,
+                      color: Color(0XFF0869E1),
                       fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
@@ -159,8 +159,7 @@ class dia_danhState extends State<dia_danh> {
                     TextButton(
                         onPressed: () {},
                         child: Container(
-                          width: 150,
-                          height: 80,
+                          width: 95,
                           child: Image.asset("images/logo-ver3.png"),
                         ))
                   ],
@@ -169,10 +168,19 @@ class dia_danhState extends State<dia_danh> {
                   children: [
                     TextButton(
                         onPressed: () {},
-                        child: CircleAvatar(
-                          radius: 35,
-                          backgroundImage: AssetImage("images/a.jpg"),
-                        ))
+                        child: Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                      "images/a.jpg",
+                                    ),
+                                    fit: BoxFit.cover),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(50.0)),
+                                border:
+                                    Border.all(width: 2, color: Colors.white))))
                   ],
                 )
               ],
@@ -182,7 +190,7 @@ class dia_danhState extends State<dia_danh> {
             margin: EdgeInsets.only(top: 5),
             decoration: BoxDecoration(
                 border: Border.fromBorderSide(
-                    BorderSide(width: 1, color: Colors.grey))),
+                    BorderSide(width: 1, color: Colors.grey.shade300))),
           ),
           Container(
             padding: EdgeInsets.all(30),
@@ -192,7 +200,7 @@ class dia_danhState extends State<dia_danh> {
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.blueAccent),
+                  color: Color(0XFF0869E1)),
             ),
           ),
           Row(
@@ -206,7 +214,7 @@ class dia_danhState extends State<dia_danh> {
                         hintText: "Nhập địa điểm cần đến...",
                         prefixIcon: Icon(
                           Icons.place,
-                          color: Colors.blueAccent,
+                          color: Color(0XFF0869E1),
                         )),
                   ),
                 ),

@@ -22,7 +22,7 @@ class form_regisState extends State<form_regis> {
                 },
                 icon: Icon(
                   Icons.arrow_back,
-                  color: Colors.blueAccent,
+                  color: Color(0XFF0869E1),
                 )),
             backgroundColor: Colors.white,
             shadowColor: Colors.white,
@@ -33,7 +33,7 @@ class form_regisState extends State<form_regis> {
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: Colors.blueAccent),
+                    color: Color(0XFF0869E1)),
               ),
             )),
         body: ListView(
@@ -159,7 +159,7 @@ class form_regisState extends State<form_regis> {
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.blueAccent),
+                      color: Color(0XFF0869E1)),
                   child: TextButton(
                     onPressed: () {},
                     child: Text(

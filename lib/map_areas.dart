@@ -86,7 +86,7 @@ class map_areasState extends State<map_areas> {
                 child: Text(
                   title,
                   style: TextStyle(
-                      color: Colors.blueAccent,
+                      color: Color(0XFF0869E1),
                       fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
@@ -125,7 +125,7 @@ class map_areasState extends State<map_areas> {
                         margin: EdgeInsets.only(right: 15),
                         child: Text(
                           "Đề xuất lên hệ thống",
-                          style: TextStyle(color: Colors.blueAccent),
+                          style: TextStyle(color: Color(0XFF0869E1)),
                         ),
                       )
                     ],

@@ -20,7 +20,7 @@ class form_change_infoState extends State<form_change_info> {
                 },
                 icon: Icon(
                   Icons.arrow_back,
-                  color: Colors.blueAccent,
+                  color: Color(0XFF0869E1),
                 )),
             backgroundColor: Colors.white,
             shadowColor: Colors.white,
@@ -31,7 +31,7 @@ class form_change_infoState extends State<form_change_info> {
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: Colors.blueAccent),
+                    color: Color(0XFF0869E1)),
               ),
             )),
         body: ListView(
@@ -167,7 +167,7 @@ class form_change_infoState extends State<form_change_info> {
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.blueAccent),
+                      color: Color(0XFF0869E1)),
                   child: TextButton(
                     onPressed: () {},
                     child: Text(

@@ -28,14 +28,20 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
                 ),
               ),
               Positioned(
-                  top: 175,
-                  left: 20,
-                  child: CircleAvatar(
-                    radius: 45,
-                    backgroundImage: AssetImage(
-                      "images/a.jpg",
-                    ),
-                  )),
+                top: 172,
+                left: 20,
+                child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                              "images/a.jpg",
+                            ),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                        border: Border.all(width: 2, color: Colors.white))),
+              ),
               Positioned(
                 top: 220,
                 left: 75,
@@ -147,9 +153,17 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
           ),
           Container(
             child: ListTile(
-              leading: CircleAvatar(
-                backgroundImage: AssetImage("images/a.jpg"),
-              ),
+              leading: Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(
+                            "images/a.jpg",
+                          ),
+                          fit: BoxFit.cover),
+                      borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                      border: Border.all(width: 2, color: Colors.white))),
               title: Text(
                 "Phuc Nguyen",
                 style: TextStyle(fontWeight: FontWeight.bold),
@@ -178,7 +192,7 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
                   child: Container(
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
-                        border: Border.all(width: 1, color: Colors.blueAccent),
+                        border: Border.all(width: 1, color: Color(0XFF0869E1)),
                         borderRadius: BorderRadius.circular(5)),
                     child: Text("Ho Chi Minh City,Viet Nam"),
                   ),
@@ -229,7 +243,7 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
                               checkLike = !checkLike;
                             },
                             icon: checkLike
-                                ? Icon(Icons.thumb_up, color: Colors.blueAccent)
+                                ? Icon(Icons.thumb_up, color: Color(0XFF0869E1))
                                 : Icon(Icons.thumb_up_outlined,
                                     color: Colors.grey),
                           ),
@@ -245,7 +259,7 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
                             },
                             icon: checkUnLike
                                 ? Icon(Icons.thumb_down,
-                                    color: Colors.blueAccent)
+                                    color: Color(0XFF0869E1))
                                 : Icon(Icons.thumb_down_outlined,
                                     color: Colors.grey),
                           ),

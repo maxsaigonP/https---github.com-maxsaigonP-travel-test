@@ -15,7 +15,7 @@ class create_postState extends State<create_post> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        foregroundColor: Colors.blueAccent,
+        foregroundColor: Color(0XFF0869E1),
         backgroundColor: Colors.white,
         title: Row(
           children: [
@@ -24,14 +24,14 @@ class create_postState extends State<create_post> {
               child: Text(
                 "Bài viết",
                 style: TextStyle(
-                    color: Colors.blueAccent,
+                    color: Color(0XFF0869E1),
                     fontWeight: FontWeight.bold,
                     fontSize: 25),
               ),
             ),
             Container(
                 decoration: BoxDecoration(
-                    color: Colors.blueAccent,
+                    color: Color(0XFF0869E1),
                     borderRadius: BorderRadius.circular(5)),
                 width: 65,
                 height: 35,
@@ -54,8 +54,12 @@ class create_postState extends State<create_post> {
         children: [
           Container(
             child: ListTile(
-              leading: CircleAvatar(
-                backgroundImage: AssetImage("images/a.jpg"),
+              leading: Container(
+                width: 50,
+                height: 50,
+                child: CircleAvatar(
+                  backgroundImage: AssetImage("images/a.jpg"),
+                ),
               ),
               title: Text(
                 "Phuc Nguyen",
@@ -98,7 +102,7 @@ class create_postState extends State<create_post> {
               margin: EdgeInsets.only(bottom: 30, left: 20),
               padding: EdgeInsets.only(left: 20, right: 20, top: 5, bottom: 5),
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey),
+                  border: Border.all(color: Color(0XFF65676B)),
                   borderRadius: BorderRadius.circular(5)),
               child: Row(
                 children: [
@@ -120,7 +124,7 @@ class create_postState extends State<create_post> {
                 padding:
                     EdgeInsets.only(left: 20, right: 20, top: 5, bottom: 5),
                 decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey),
+                    border: Border.all(color: Color(0XFF65676B)),
                     borderRadius: BorderRadius.circular(5)),
                 child: Row(
                   children: [

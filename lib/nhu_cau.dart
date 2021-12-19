@@ -28,7 +28,7 @@ class nhu_cauState extends State<nhu_cau> {
               child: Text(
                 title,
                 style: TextStyle(
-                    color: Colors.blueAccent,
+                    color: Color(0XFF0869E1),
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),
@@ -103,8 +103,7 @@ class nhu_cauState extends State<nhu_cau> {
                     TextButton(
                         onPressed: () {},
                         child: Container(
-                          width: 150,
-                          height: 80,
+                          width: 95,
                           child: Image.asset("images/logo-ver3.png"),
                         ))
                   ],
@@ -113,10 +112,19 @@ class nhu_cauState extends State<nhu_cau> {
                   children: [
                     TextButton(
                         onPressed: () {},
-                        child: CircleAvatar(
-                          radius: 35,
-                          backgroundImage: AssetImage("images/a.jpg"),
-                        ))
+                        child: Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                      "images/a.jpg",
+                                    ),
+                                    fit: BoxFit.cover),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(50.0)),
+                                border:
+                                    Border.all(width: 2, color: Colors.white))))
                   ],
                 )
               ],
@@ -136,7 +144,7 @@ class nhu_cauState extends State<nhu_cau> {
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.blueAccent),
+                  color: Color(0XFF0869E1)),
             ),
           ),
           Row(
@@ -150,7 +158,7 @@ class nhu_cauState extends State<nhu_cau> {
                         hintText: "Nhu cầu của bạn là gì ?",
                         prefixIcon: Icon(
                           Icons.place,
-                          color: Colors.blueAccent,
+                          color: Color(0XFF0869E1),
                         )),
                   ),
                 ),

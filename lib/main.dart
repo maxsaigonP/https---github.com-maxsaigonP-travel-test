@@ -48,34 +48,34 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
           xem_them(),
         ]),
         bottomNavigationBar: TabBar(
-            labelColor: Colors.blueAccent,
+            labelColor: Color(0XFF0869E1),
             controller: _tabController,
             tabs: [
               Tab(
                 icon: Icon(
                   Icons.house_outlined,
-                  color: Colors.blueAccent,
+                  color: Color(0XFF0869E1),
                 ),
                 text: "Trang chủ",
               ),
               Tab(
                 icon: Icon(
                   Icons.search_outlined,
-                  color: Colors.blueAccent,
+                  color: Color(0XFF0869E1),
                 ),
                 text: "Tìm kiếm",
               ),
               Tab(
                 icon: Icon(
                   Icons.map,
-                  color: Colors.blueAccent,
+                  color: Color(0XFF0869E1),
                 ),
                 text: "Bản đồ",
               ),
               Tab(
                 icon: Icon(
                   Icons.dehaze,
-                  color: Colors.blueAccent,
+                  color: Color(0XFF0869E1),
                 ),
                 text: "Xem thêm",
               ),

@@ -185,7 +185,7 @@ class home_tabState extends State<home_tab> {
                 children: [
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.thumb_up, color: Colors.blueAccent),
+                    icon: Icon(Icons.thumb_up, color: Color(0XFF0869E1)),
                   ),
                   Text("5.6k")
                 ],
@@ -288,7 +288,7 @@ class home_tabState extends State<home_tab> {
           children: [
             Text(
               title,
-              style: TextStyle(color: Colors.blueAccent, fontSize: 20),
+              style: TextStyle(color: Color(0XFF0869E1), fontSize: 20),
             )
           ],
         ),
@@ -315,7 +315,7 @@ class home_tabState extends State<home_tab> {
               },
               child: Text(
                 "Xem thêm",
-                style: TextStyle(fontSize: 15, color: Colors.blueAccent),
+                style: TextStyle(fontSize: 15, color: Color(0XFF0869E1)),
               ),
             )
           ],
@@ -343,8 +343,7 @@ class home_tabState extends State<home_tab> {
                           TextButton(
                               onPressed: () {},
                               child: Container(
-                                width: 150,
-                                height: 80,
+                                width: 95,
                                 child: Image.asset("images/logo-ver3.png"),
                               ))
                         ],
@@ -358,10 +357,19 @@ class home_tabState extends State<home_tab> {
                                     MaterialPageRoute(
                                         builder: (context) => trang_ca_nhan()));
                               },
-                              child: CircleAvatar(
-                                radius: 35,
-                                backgroundImage: AssetImage("images/a.jpg"),
-                              ))
+                              child: Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                            "images/a.jpg",
+                                          ),
+                                          fit: BoxFit.cover),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(50.0)),
+                                      border: Border.all(
+                                          width: 2, color: Colors.white))))
                         ],
                       )
                     ],
@@ -375,12 +383,20 @@ class home_tabState extends State<home_tab> {
                   Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(15),
-                        child: CircleAvatar(
-                          radius: 25,
-                          backgroundImage: AssetImage("images/a.jpg"),
-                        ),
-                      ),
+                          padding: EdgeInsets.all(15),
+                          child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                        "images/a.jpg",
+                                      ),
+                                      fit: BoxFit.cover),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50.0)),
+                                  border: Border.all(
+                                      width: 2, color: Colors.white)))),
                       Container(
                         padding: EdgeInsets.only(left: 5),
                         width: 280,
@@ -462,7 +478,7 @@ class home_tabState extends State<home_tab> {
                     bottom: BorderSide(width: 1, color: Colors.grey.shade300))),
             child: Text(
               "Bài Viết",
-              style: TextStyle(fontSize: 20, color: Colors.blueAccent),
+              style: TextStyle(fontSize: 20, color: Color(0XFF0869E1)),
             ),
           ),
           Container(
@@ -498,7 +514,7 @@ class home_tabState extends State<home_tab> {
                   child: Container(
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
-                        border: Border.all(width: 1, color: Colors.blueAccent),
+                        border: Border.all(width: 1, color: Color(0XFF0869E1)),
                         borderRadius: BorderRadius.circular(5)),
                     child: Text("Ho Chi Minh City,Viet Nam"),
                   ),
@@ -546,7 +562,7 @@ class home_tabState extends State<home_tab> {
                           IconButton(
                             onPressed: () {},
                             icon:
-                                Icon(Icons.thumb_up, color: Colors.blueAccent),
+                                Icon(Icons.thumb_up, color: Color(0XFF0869E1)),
                           ),
                           Text("Thích")
                         ],
