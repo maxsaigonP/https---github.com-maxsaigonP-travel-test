@@ -3,7 +3,9 @@ import 'package:travel_p/form_app.dart';
 import 'package:travel_p/form_login.dart';
 import 'package:travel_p/form_regis.dart';
 import 'package:travel_p/home_tab.dart';
+import 'package:travel_p/map_areas.dart';
 import 'package:travel_p/trang_ca_nhan.dart';
+import 'package:travel_p/xem_them_tab.dart';
 import 'tim_kiem.dart';
 
 void main() {
@@ -42,8 +44,8 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
         body: TabBarView(controller: _tabController, children: [
           home_tab(),
           search_tab(),
-          form_login(),
-          trang_ca_nhan(),
+          map_areas(),
+          xem_them(),
         ]),
         bottomNavigationBar: TabBar(
             labelColor: Colors.blueAccent,

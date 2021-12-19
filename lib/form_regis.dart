@@ -67,7 +67,7 @@ class form_regisState extends State<form_regis> {
                 Container(
                   padding: EdgeInsets.only(left: 15, bottom: 15, right: 15),
                   child: TextField(
-                    obscureText: checkPass ? true : false,
+                    keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       hintText: "Nhập email",
                     ),
@@ -84,7 +84,7 @@ class form_regisState extends State<form_regis> {
                 Container(
                   padding: EdgeInsets.only(left: 15, bottom: 15, right: 15),
                   child: TextField(
-                    obscureText: checkPass ? true : false,
+                    keyboardType: TextInputType.phone,
                     decoration: InputDecoration(
                       hintText: "Nhập số điện thoại",
                     ),
@@ -133,7 +133,7 @@ class form_regisState extends State<form_regis> {
                 Container(
                   padding: EdgeInsets.only(left: 15, bottom: 15, right: 15),
                   child: TextField(
-                    obscureText: checkPass ? true : false,
+                    obscureText: checkRePass ? true : false,
                     decoration: InputDecoration(
                       suffixIcon: IconButton(
                         onPressed: () {
