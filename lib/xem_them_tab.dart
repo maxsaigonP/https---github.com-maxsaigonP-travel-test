@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_p/create_post.dart';
 import 'package:travel_p/de_xuat_dia_danh.dart';
-import 'package:travel_p/form_app.dart';
 
 class xem_them extends StatefulWidget {
   @override
@@ -63,10 +62,7 @@ class xem_themState extends State<xem_them> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: TextButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => form_app()));
-                  },
+                  onPressed: () {},
                   child: Text(
                     "Đăng Xuất",
                     style: TextStyle(color: Color(0XFF0869E1), fontSize: 20),

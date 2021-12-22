@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:travel_p/changepw_page.dart';
 import 'package:travel_p/form_change_info.dart';
-import 'package:travel_p/form_change_pass.dart';
 
 class trang_ca_nhan extends StatefulWidget {
   @override
@@ -102,7 +102,8 @@ class trang_ca_nhanState extends State<trang_ca_nhan> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => form_change_pass()));
+                                    builder: (context) =>
+                                        const ChangePasswordPage()));
                           },
                         ),
                       ),

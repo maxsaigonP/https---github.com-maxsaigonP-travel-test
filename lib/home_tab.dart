@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_p/create_post.dart';
 import 'package:travel_p/dia_danh.dart';
 import 'package:travel_p/luu_tru.dart';
@@ -7,14 +8,16 @@ import 'package:travel_p/nhu_cau.dart';
 import 'package:travel_p/quan_an.dart';
 import 'package:travel_p/trang_ca_nhan.dart';
 
-class home_tab extends StatefulWidget {
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
-    return home_tabState();
+    return HomePageState();
   }
 }
 
-class home_tabState extends State<home_tab> {
+class HomePageState extends State<HomePage> {
   final scroll = ScrollController();
   final List<Column> imgListDiaDanh = [
     Column(
@@ -68,36 +71,33 @@ class home_tabState extends State<home_tab> {
         Stack(
           alignment: Alignment.center,
           children: [
-            Container(
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius:
-                        BorderRadiusDirectional.all(Radius.circular(16))),
-                clipBehavior: Clip.antiAlias,
-                child: Image.asset(
-                  "images/z.jpg",
-                  width: double.maxFinite,
+            Card(
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadiusDirectional.all(
+                  Radius.circular(16),
                 ),
+              ),
+              clipBehavior: Clip.antiAlias,
+              child: Image.asset(
+                "images/z.jpg",
+                width: double.maxFinite,
               ),
             ),
             Positioned(
-                top: 145,
-                left: 130,
-                child: Row(
-                  children: [
-                    Container(
-                      child: Text(
-                        "Tắm Biển",
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
-                      ),
-                    )
-                  ],
-                ))
+              top: 145,
+              child: Container(
+                padding: const EdgeInsets.only(bottom: 15),
+                child: const Text(
+                  "Tắm biển",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Roboto',
+                      fontSize: 18),
+                ),
+              ),
+            ),
           ],
-        ),
-        Expanded(
-          child: SizedBox(),
         ),
       ],
     )
@@ -288,7 +288,12 @@ class home_tabState extends State<home_tab> {
           children: [
             Text(
               title,
-              style: TextStyle(color: Color(0XFF0869E1), fontSize: 20),
+              style: const TextStyle(
+                color: Color(0XFF000000),
+                fontSize: 20,
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.w500,
+              ),
             )
           ],
         ),
@@ -313,9 +318,13 @@ class home_tabState extends State<home_tab> {
                       MaterialPageRoute(builder: (context) => dia_danh()));
                 }
               },
-              child: Text(
+              child: const Text(
                 "Xem thêm",
-                style: TextStyle(fontSize: 15, color: Color(0XFF0869E1)),
+                style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w400,
+                    fontSize: 16,
+                    color: Color(0XFF0869E1)),
               ),
             )
           ],
@@ -331,140 +340,127 @@ class home_tabState extends State<home_tab> {
         controller: scroll,
         children: [
           Padding(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        children: [
-                          TextButton(
-                              onPressed: () {},
-                              child: Container(
-                                width: 95,
-                                child: Image.asset("images/logo-ver3.png"),
-                              ))
-                        ],
+                      TextButton(
+                        onPressed: () {},
+                        child: Image.asset(
+                          'images/logo-ver3.png',
+                          width: 95,
+                        ),
                       ),
-                      Row(
-                        children: [
-                          TextButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => trang_ca_nhan()));
-                              },
-                              child: Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                            "images/a.jpg",
-                                          ),
-                                          fit: BoxFit.cover),
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(50.0)),
-                                      border: Border.all(
-                                          width: 2, color: Colors.white))))
-                        ],
-                      )
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => trang_ca_nhan()));
+                        },
+                        child: Container(
+                          width: 40,
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: const Color(0xff7c94b6),
+                            image: const DecorationImage(
+                              image: AssetImage('images/avatar.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(50.0)),
+                            border: Border.all(
+                              color: const Color(0XFFE40158),
+                              width: 1.0,
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 5),
-                    decoration: BoxDecoration(
+                    margin: const EdgeInsets.only(top: 5),
+                    decoration: const BoxDecoration(
                         border: Border.fromBorderSide(
-                            BorderSide(width: 1, color: Colors.grey.shade300))),
+                            BorderSide(width: 0.5, color: Color(0XFFB9B9B9)))),
                   ),
                   Row(
                     children: [
                       Container(
-                          padding: EdgeInsets.all(15),
-                          child: Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                        "images/a.jpg",
-                                      ),
-                                      fit: BoxFit.cover),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(50.0)),
-                                  border: Border.all(
-                                      width: 2, color: Colors.white)))),
-                      Container(
-                        padding: EdgeInsets.only(left: 5),
-                        width: 280,
+                        margin: const EdgeInsets.only(
+                            bottom: 15, top: 15, right: 15),
+                        width: 40,
                         height: 40,
                         decoration: BoxDecoration(
-                            border: Border.all(width: 1, color: Colors.grey),
+                          color: const Color(0xff7c94b6),
+                          image: const DecorationImage(
+                            image: AssetImage('images/avatar.jpg'),
+                            fit: BoxFit.cover,
+                          ),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(50.0)),
+                          border: Border.all(
+                            color: const Color(0XFFE40158),
+                            width: 1.0,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 290,
+                        height: 40,
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                width: 1, color: const Color(0XFFB9B9B9)),
                             borderRadius:
-                                BorderRadius.all(Radius.circular(30))),
+                                const BorderRadius.all(Radius.circular(50))),
                         child: TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => create_post()));
-                            },
-                            child: Align(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => create_post()));
+                          },
+                          child: Align(
                               alignment: Alignment.centerLeft,
-                              child: Text("Chia sẻ địa danh..."),
-                            )),
-                      )
+                              child: Container(
+                                margin: const EdgeInsets.only(left: 10),
+                                child: const Text(
+                                  "Chia sẻ địa danh...",
+                                  style: TextStyle(
+                                    fontFamily: 'Roboto',
+                                    fontWeight: FontWeight.w400,
+                                    color: Color(0XFF050505),
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              )),
+                        ),
+                      ),
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 5),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         border: Border.fromBorderSide(
-                            BorderSide(width: 1, color: Colors.grey.shade300))),
+                            BorderSide(width: 0.5, color: Color(0XFFB9B9B9)))),
                   ),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  sliderTitle("Địa Danh Nổi Bật"),
-                  SizedBox(
-                    height: 15,
+                  Container(
+                    padding: const EdgeInsets.only(top: 15, bottom: 15),
+                    child: sliderTitle("Địa danh nổi bật"),
                   ),
                   slideShow(imgListDiaDanh),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  sliderTitle("Bài Viết Nổi Bật"),
-                  SizedBox(
-                    height: 15,
+                  Container(
+                    padding: const EdgeInsets.only(top: 15, bottom: 15),
+                    child: sliderTitle("Bài viết nổi bật"),
                   ),
                   slideShowQuan(imgListBaiViet),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  sliderTitle("Nhu Cầu"),
-                  SizedBox(
-                    height: 15,
+                  Container(
+                    padding: const EdgeInsets.only(top: 15, bottom: 15),
+                    child: sliderTitle("Nhu cầu"),
                   ),
                   slideShow(imgListNhuCau),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  sliderTitle("Quán Ăn"),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  slideShowQuan(imgListQuanAn),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  sliderTitle("Lưu Trú"),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  slideShowQuan(imgListLuuTru),
                 ],
               )),
           SizedBox(
@@ -601,11 +597,12 @@ class home_tabState extends State<home_tab> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          final double start = 0;
+          const double start = 0;
           scroll.animateTo(start,
-              duration: Duration(seconds: 1), curve: Curves.easeIn);
+              duration: const Duration(seconds: 1), curve: Curves.easeIn);
         },
-        child: Icon(Icons.arrow_upward),
+        backgroundColor: const Color(0XFF0869E1),
+        child: const FaIcon(FontAwesomeIcons.arrowUp),
       ),
     );
   }
